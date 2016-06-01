@@ -3,11 +3,13 @@ var api = require('../index');
 
 describe('contacts',function(){
 	describe('GET /contacts',function(){
+		it('should return 202',function(){
 			return request(api)
 			.get('/contacts')
 			.send()
 			.expect(200)
 		});
+	});
 	
 	describe('POST /contacts/:name',function(){
 		it('should create a new contact',function(){
