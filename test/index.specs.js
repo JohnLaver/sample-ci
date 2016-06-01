@@ -20,7 +20,7 @@ describe('contacts',function(){
 		});
 		it('should not be authorized to create a new contact with an already ',function(){
 			return request(api)
-			.post('/contacts/exists')
+			.post('/contacts/exist')
 			.send()
 			.expect(403)
 		});
