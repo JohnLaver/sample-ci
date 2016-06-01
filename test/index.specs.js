@@ -16,6 +16,12 @@ describe('contacts',function(){
 			.send()
 			.expect(200)
 		});
+		it('should not be authorized to create a new contact with an already ',function(){
+			return request(api)
+			.post('/contacts/exists')
+			.send()
+			.expect(403)
+		});
 	});
 	describe('PUT /contacts/:name/:new',function(){
 		it('should cupdtae contact with same name',function(){
