@@ -3,7 +3,7 @@ var api = require('../index');
 
 describe('contacts',function(){
 	describe('GET /contacts',function(){
-		it('should return 202',function(){
+		it('should return 200',function(){
 			return request(api)
 			.get('/contacts')
 			.send()
